@@ -21,7 +21,7 @@ STEPS ( I take these steps to reduce the computational time for the calculation)
     -- create a folder SC inside your LSOL folder. 
     -- Copy the following files from the LSOL folder to SC folder : OUTCAR and CONTCAR 
     -- change the file name of CONTCAR to POSCAR inside the SC folder.
-    -- put the ase-bfgs.py ( ase python file that will do the vasp calcualtion) and the submission script as job.sh ( The names are important to be kept as the same)
+    -- put the ase_surface_charging.py in the SC folder and change its name to ase-bfgs.py ( ase python file that will do the vasp calcualtion, so change any input parameters accoding to the system) and the submission script as job.sh ( The names are important to be kept as the same)
 5. Run the gen-scpot.py file inside the SC folder. This will create all the folders with different NELECT valules and also submit the calculation in each folder. You dont need to do anything else if your job.sh, ase-bfgs.py etc files are good .
 6. These calculations do take considerable time so it can be taht you need to resubmit certain jobs in certain NELECT folder, you will have to do this step manually.
 7. Once the converage criteria is reached in each folder, run the plot_sc.py, this will give you the paprabolic equation and also give out certain plots. To visualize if your plots are fitting to the points , please visualize the g-pot.png file before using the papabola to use in further analysis.
